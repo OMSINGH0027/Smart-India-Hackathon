@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart India Hackathon Project Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-robot"></i> SIH ChatBot
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#overview" class="nav-link">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#features" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#architecture" class="nav-link">Architecture</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#setup" class="nav-link">Setup</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#api" class="nav-link">API</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#team" class="nav-link">Team</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Smart India Hackathon</h1>
+                <h2 class="hero-subtitle">Intelligent Campus ChatBot</h2>
+                <p class="hero-description">
+                    A multilingual campus chatbot that handles student queries in multiple regional languages, 
+                    maintains conversational context, and integrates with web and messaging channels.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#setup" class="btn btn-primary">
+                        <i class="fas fa-play"></i> Get Started
+                    </a>
+                    <a href="https://github.com/OMSINGH0027/Smart-India-Hackathon" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="chat-demo">
+                    <div class="chat-header">
+                        <i class="fas fa-robot"></i>
+                        <span>Campus Assistant</span>
+                        <div class="status-indicator"></div>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="message bot-message">
+                            <div class="message-content">Hello! How can I help you today?</div>
+                        </div>
+                        <div class="message user-message">
+                            <div class="message-content">What are the library timings?</div>
+                        </div>
+                        <div class="message bot-message typing">
+                            <div class="message-content">
+                                <div class="typing-indicator">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="overview" class="section">
+            <div class="container">
+                <h2 class="section-title">Project Overview</h2>
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Multilingual Support</h3>
+                        <p>Handles queries in multiple regional languages with intelligent language detection and translation capabilities.</p>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Intent Classification</h3>
+                        <p>Advanced ML-based intent recognition system that understands student queries and provides contextual responses.</p>
+                    </div>
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>Campus Integration</h3>
+                        <p>Seamlessly integrates with campus systems to provide real-time information about academics, facilities, and events.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-number">01</div>
+                        <div class="feature-content">
+                            <h3>Natural Language Processing</h3>
+                            <p>Powered by advanced NLP algorithms for understanding complex student queries and providing accurate responses.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">02</div>
+                        <div class="feature-content">
+                            <h3>Conversational Context</h3>
+                            <p>Maintains conversation history and context to provide personalized and coherent responses throughout the interaction.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">03</div>
+                        <div class="feature-content">
+                            <h3>Multi-Channel Integration</h3>
+                            <p>Available across web interfaces, messaging platforms, and mobile applications for seamless accessibility.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">04</div>
+                        <div class="feature-content">
+                            <h3>Real-time Analytics</h3>
+                            <p>Comprehensive logging and analytics system to track user interactions and improve chatbot performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="section">
+            <div class="container">
+                <h2 class="section-title">System Architecture</h2>
+                <div class="architecture-diagram">
+                    <div class="arch-layer">
+                        <h3>Frontend Layer</h3>
+                        <div class="arch-components">
+                            <div class="component">React.js Interface</div>
+                            <div class="component">Vite Build System</div>
+                            <div class="component">Responsive Design</div>
+                        </div>
+                    </div>
+                    <div class="arch-layer">
+                        <h3>API Layer</h3>
+                        <div class="arch-components">
+                            <div class="component">FastAPI Backend</div>
+                            <div class="component">REST Endpoints</div>
+                            <div class="component">CORS Configuration</div>
+                        </div>
+                    </div>
+                    <div class="arch-layer">
+                        <h3>Intelligence Layer</h3>
+                        <div class="arch-components">
+                            <div class="component">Intent Classifier</div>
+                            <div class="component">Language Detection</div>
+                            <div class="component">Response Generator</div>
+                        </div>
+                    </div>
+                    <div class="arch-layer">
+                        <h3>Data Layer</h3>
+                        <div class="arch-components">
+                            <div class="component">Intent Dataset</div>
+                            <div class="component">Conversation Logs</div>
+                            <div class="component">Campus Data</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="setup" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Installation & Setup</h2>
+                <div class="setup-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Clone Repository</h3>
+                            <pre><code class="language-bash">git clone https://github.com/OMSINGH0027/Smart-India-Hackathon.git
+cd Smart-India-Hackathon</code></pre>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Backend Setup</h3>
+                            <pre><code class="language-bash">cd backend
+pip install fastapi uvicorn pandas scikit-learn
+python main.py</code></pre>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Frontend Setup</h3>
+                            <pre><code class="language-bash">cd frontend
+npm install
+npm run dev</code></pre>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Access Application</h3>
+                            <p>Open your browser and navigate to:</p>
+                            <ul>
+                                <li><strong>Frontend:</strong> http://localhost:5173</li>
+                                <li><strong>API Docs:</strong> http://localhost:8000/docs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="api" class="section">
+            <div class="container">
+                <h2 class="section-title">API Documentation</h2>
+                <div class="api-docs">
+                    <div class="endpoint">
+                        <div class="endpoint-header">
+                            <span class="method post">POST</span>
+                            <span class="path">/chat</span>
+                        </div>
+                        <div class="endpoint-description">
+                            <p>Send a message to the chatbot and receive a response.</p>
+                        </div>
+                        <div class="endpoint-section">
+                            <h4>Request Body</h4>
+                            <pre><code class="language-json">{
+  "message": "Hello, how are you?"
+}</code></pre>
+                        </div>
+                        <div class="endpoint-section">
+                            <h4>Response</h4>
+                            <pre><code class="language-json">{
+  "response": "Hi there! How can I help you today?"
+}</code></pre>
+                        </div>
+                        <div class="endpoint-section">
+                            <h4>Example Usage</h4>
+                            <pre><code class="language-javascript">fetch('/chat', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    message: 'What are the library timings?'
+  })
+})
+.then(response => response.json())
+.then(data => console.log(data.response));</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Development Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>OMSINGH0027</h3>
+                        <p class="member-role">Lead Developer</p>
+                        <p class="member-description">Full-stack developer specializing in AI/ML integration and system architecture.</p>
+                        <div class="member-links">
+                            <a href="https://github.com/OMSINGH0027" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>Team Contributors</h3>
+                        <p class="member-role">Collaborative Development</p>
+                        <p class="member-description">Originally forked from Parth-307's repository, enhanced with additional features and improvements.</p>
+                        <div class="member-links">
+                            <a href="https://github.com/Parth-307" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Smart India Hackathon</h3>
+                    <p>Building intelligent solutions for India's digital transformation.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#setup">Setup Guide</a></li>
+                        <li><a href="#api">API Docs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://github.com/OMSINGH0027/Smart-India-Hackathon" target="_blank">GitHub Repository</a></li>
+                        <li><a href="https://www.sih.gov.in/" target="_blank">Smart India Hackathon</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/OMSINGH0027" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Smart India Hackathon Project. Built with ❤️ for innovation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
